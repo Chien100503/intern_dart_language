@@ -1,12 +1,12 @@
 mixin Logger {
-  void log(String message) => print('hihi $message');
+  void log(String message) => print('Hẹ hẹ $message');
 }
 
 class Animal {}
 
 class Dog extends Animal with Logger {
   void talk() {
-    log('gaugau');
+    log('Gâu Gâu');
   }
 }
 

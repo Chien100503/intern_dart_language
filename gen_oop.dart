@@ -32,5 +32,5 @@ void main() {
   var catCage = Cage(Cat());
   catCage.letAnimalSpeak(); // Meow!
 
-  // var numCage = Cage(123); ❌ Error: int không phải Animal
+  // var numCage = Cage(123); // ❌ Error: int không phải Animal
 }

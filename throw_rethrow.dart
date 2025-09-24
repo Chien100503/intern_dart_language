@@ -15,5 +15,6 @@ void riskyFunction() {
     // Xử lý một phần, rồi ném lại
     // throw e.toString();
     rethrow;
+    
   }
 }

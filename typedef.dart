@@ -9,8 +9,9 @@
 
 typedef IntList = List<int>;
 void main() {
-  IntList scores = [8, 9, 10];
+  List<int> scores = [8, 9, 10]; 
+  IntList scores1 = [3, 6, 5];
   IntList scores2 = [8, 9, 111];
-  print(scores2);
-  print(scores[1] + scores[2]);
+  print(scores1);
+  print(scores[1] + scores2[2]);
 }
