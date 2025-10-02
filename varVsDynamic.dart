@@ -1,8 +1,9 @@
 void main() {
-  // Type: num
+  // Type: num\
   double a = -5.7;
   print(a.abs());
   // a = 'Error'; // Error
+
   // Dynamic
   dynamic y = "Hello";
   print(y.toUpperCase());
@@ -12,4 +13,6 @@ void main() {
 
   y = true;
   print(y);
+
+  assert(y);
 }
