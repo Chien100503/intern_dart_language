@@ -1,10 +1,11 @@
-Iterable<int> subNumbers() sync* {
+Iterable<dynamic> subNumbers() sync* {
   yield 1;
   yield 2;
+  yield 2.5;
 }
 
-Iterable<int> numbers() sync* {
-  yield* subNumbers(); 
+Iterable<dynamic> numbers() sync* {
+  yield* subNumbers();
   yield 3;
 }
 

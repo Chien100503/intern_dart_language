@@ -1,3 +1,4 @@
+// --------------- Singleton
 class Database {
   // hold only instance
   static final Database _instance = Database._internal();
@@ -15,7 +16,34 @@ class Database {
   }
 }
 
+abstract class Shape {
+  void draw();
+
+  factory Shape(String type) {
+    if (type == "circle") return Circle();
+    if (type == "square") return Square();
+    throw Exception("Unknown shape");
+  }
+}
+
+class Circle implements Shape {
+  @override
+  void draw() => print("Vẽ hình tròn");
+}
+
+class Square implements Shape {
+  @override
+  void draw() => print("Vẽ hình vuông");
+}
+
 void main() {
+  Shape s1 = Shape("circle");
+  Shape s2 = Shape("square");
+
+  s1.draw(); // Vẽ hình tròn
+  s2.draw(); // Vẽ hình vuông
+
+  // --------------------------
   var db1 = Database();
   var db2 = Database();
 

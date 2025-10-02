@@ -1,7 +1,7 @@
 // Hàm tạo Stream: phát ra số từ 1 đến [to], mỗi số cách nhau 1 giây
 Stream<int> timedCounter(int to) async* {
   for (int i = 1; i <= to; i++) {
-    await Future.delayed(Duration(seconds: 1)); // chờ 1 giây
+    await Future.delayed(Duration(seconds: 1));
     yield i; // phát giá trị ra Stream
   }
 }

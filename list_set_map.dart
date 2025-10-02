@@ -5,11 +5,11 @@
 //   print("List: $numbers"); // [1, 2, 3, 3]
 //   print("First item: ${numbers[0]}"); // 1
 
-  // // ===== SET =====
-  // // Unordered, unique elements
-  // Set<String> fruits = {"apple", "banana", "apple"};
-  // print("Set: $fruits"); // {apple, banana}
-  // print("Contains banana? ${fruits.contains("banana")}"); // true
+// // ===== SET =====
+// // Unordered, unique elements
+// Set<String> fruits = {"apple", "banana", "apple"};
+// print("Set: $fruits"); // {apple, banana}
+// print("Contains banana? ${fruits.contains("banana")}"); // true
 
 //   // ===== MAP =====
 //   // Key–value pairs, keys must be unique
@@ -49,22 +49,20 @@
 
 List<String> list = ['123', '123'];
 void main() {
-  var student = {
-    "id": 101,
-    "name": "Alice",
-    "age": 20
-  };
+  var student = {"id": 101, "name": "Alice", "age": 20};
 
-  print("Map: $student"); 
+  print("Map: $student");
   print("Tên sinh viên: ${student["name"]}"); // Alice
 
   student["grade"] = "A";
-  print("Sau khi thêm: $student"); 
+  student['score'] = 9.0;
+  print("Sau khi thêm: $student");
 
   student.forEach((key, value) {
     print("$key: $value");
   });
 }
+
 String asciiCharType(int char) {
   const space = 32;
   const zero = 48;
