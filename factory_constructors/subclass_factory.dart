@@ -36,9 +36,12 @@ class ApiResponse {
 
   ApiResponse(this.code, this.message);
 
+  bool hehe = true;
+
+
   factory ApiResponse.fromJson(Map<String, dynamic> json) {
     if (json['code'] == 200) {
-      return SuccessResponse(json['message']); 
+      return SuccessResponse(json['message']);
     } else {
       return ErrorResponse(json['message']);
     }
@@ -57,6 +60,9 @@ void main() {
   var success = ApiResponse.fromJson({"code": 200, "message": "OK"});
   var error = ApiResponse.fromJson({"code": 400, "message": "Not Found"});
 
-  print(success.message); // SuccessResponse
-  print(error.message); // ErrorResponse
+  print(success.message); // OK
+  print(error.message); // Not found
+
+  print(success.runtimeType);  // SuccessResponse
+  print(error.runtimeType);  // ErrorResponse
 }

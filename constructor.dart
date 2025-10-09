@@ -4,6 +4,11 @@ class Person {
 
   Person(this.name, this.age);
 
+  @override
+  void noSuchMethod(Invocation invocation) {
+    // TODO: implement noSuchMethod
+    return super.noSuchMethod(invocation);
+  }
   // redirect đến constructor chính
   Person.baby(String name) : this(name, 0);
 

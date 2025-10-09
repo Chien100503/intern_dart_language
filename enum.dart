@@ -1,5 +1,6 @@
 enum Status { pending, success, error }
 
+
 // enum constructor
 enum Color {
   red(0xFF0000),
@@ -21,8 +22,7 @@ void main() {
     print('Đã thành công');
   } else if (current == Status.error) {
     print('Lỗi');
-  }
-  ;
+  };
 
   for (var s in Status.values) print(s);
 

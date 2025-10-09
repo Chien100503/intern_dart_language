@@ -7,20 +7,37 @@
 class PersonDefault {
   final String name;
   PersonDefault(this.name);
+
+  @override
+  String toString() {
+    return "name: $name";
+  }
+
+  // @override
+  // bool operator ==(Object other) {
+  //   return super == other;
+  // }
 }
 
 void main() {
   // constructor default
-  var pd1 = PersonDefault("A");
-  var pd2 = PersonDefault("A");
-  print(pd1 == pd2); // false
+  PersonDefault pd1 = PersonDefault("Abc");
+  PersonDefault pd2 = PersonDefault("Abc");
 
-  // Factory constructor
+  print(pd1 == pd2); // false
+  print(pd1);
+
+  print('Hash-code${pd1.hashCode}');
+  print('Hash-code${pd2.hashCode}');
+
+  // Factory   ("A");
   var p1 = Person("A");
   var p2 = Person("A");
   var p3 = Person("C");
   print(p1 == p2); // true
   print(p1 == p3);
+  print('-- ${p1.hashCode} $p1');
+  print('-- ${p2.hashCode} $p2');
 }
 
 /// Class này là class ví dụ về factory constructor
