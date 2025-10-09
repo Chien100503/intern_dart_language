@@ -61,6 +61,8 @@ void main() {
   student.forEach((key, value) {
     print("$key: $value");
   });
+
+  print(asciiCharType(10));
 }
 
 String asciiCharType(int char) {
